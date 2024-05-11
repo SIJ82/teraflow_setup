@@ -40,7 +40,7 @@ sudo usermod -a -G microk8s $USER
 sudo chown -f -R $USER $HOME/.kube
 
 touch ~/autosetup/step1_done.txt
-echo -e "All done, rebooting"
+echo -e "Step1 finished, rebooting"
 
 sudo touch "/var/run/step1_done"
 sudo reboot
