@@ -1,10 +1,11 @@
 # teraflow_setup
+## for starting the setup execute
+git clone https://github.com/SIJ82/teraflow_setup.git ~/autosetup/
+sudo chmod +x ~/autosetup/all.sh
+~/autosetup/all.sh
 
 
 
 
-sudo tail -f /var/log/apache2/access.log
-
-SomeCommand >> SomeFile.txt
-
-sudo echo "$USER ALL=(ALL) NOPASSWD: $HOME/autosetup/testroot.sh" | sudo EDITOR='tee -a' visudo
+##to monitor execution after reboot use this command
+sudo tail -f "$HOME/autosetup/logs/log.txt
