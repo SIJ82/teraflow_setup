@@ -17,6 +17,7 @@ else
   sudo rm "/var/run/step1_done"
   sudo rm "/var/run/step2_done"
   sudo rm "/var/run/step3_done"
+  sed -i '/bash/d' ~/.bashrc
   
   echo "Setupping permissions..."
   chmod +x "$HOME/autosetup/step1.sh"
@@ -26,6 +27,8 @@ else
   sudo echo "$USER ALL=(ALL) NOPASSWD: $HOME/autosetup/step1.sh" | sudo EDITOR='tee -a' visudo
   sudo echo "$USER ALL=(ALL) NOPASSWD: $HOME/autosetup/step2.sh" | sudo EDITOR='tee -a' visudo
   sudo echo "$USER ALL=(ALL) NOPASSWD: $HOME/autosetup/step3.sh" | sudo EDITOR='tee -a' visudo
+
+  echo "bash $HOME/autosetup/all.sh" >> ~/.bashrc
 
 
 
