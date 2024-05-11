@@ -1,11 +1,11 @@
 if [ -e "/var/run/step1_done" ]; then
   sudo rm "/var/run/step1_done"
-  bash "$HOME/autosetup/step2.sh" >> "$HOME/autosetup/logs/log_step2.txt" &  sudo tail -f "$HOME/autosetup/log_step2.txt"
+  bash "$HOME/autosetup/step2.sh" >> "$HOME/autosetup/logs/log.txt"
 
 
 elif [ -e "/var/run/step2_done" ]; then
   sudo rm "/var/run/step2_done"
-  bash "$HOME/autosetup/step3.sh" >> "$HOME/autosetup/logs/log_step3.txt" &  sudo tail -f "$HOME/autosetup/log_step3.txt"
+  bash "$HOME/autosetup/step3.sh" >> "$HOME/autosetup/logs/log.txt"
 
 else
   sudo apt update -y
@@ -35,7 +35,7 @@ else
 
   
   echo "Running step1...."
-  bash "$HOME/autosetup/step1.sh" >> "$HOME/autosetup/logs/log_step1.txt" &  sudo tail -f "$HOME/autosetup/log_step1.txt"
+  bash "$HOME/autosetup/step1.sh" >> "$HOME/autosetup/logs/log.txt" &  sudo tail -f "$HOME/autosetup/logs/log.txt"
 
 
 fi
