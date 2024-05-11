@@ -1,11 +1,11 @@
 if [ -e "/var/run/step1_done" ]; then
-  #sudo rm "/var/run/step1_done"
-  #bash "$HOME/autosetup/step2.sh" >> "$HOME/autosetup/logs/log.txt"
+  sudo rm "/var/run/step1_done"
+  "$HOME/autosetup/step2.sh" >> "$HOME/autosetup/logs/log.txt"
 
 
 elif [ -e "/var/run/step2_done" ]; then
-  #sudo rm "/var/run/step2_done"
-  #bash "$HOME/autosetup/step3.sh" >> "$HOME/autosetup/logs/log.txt"
+  sudo rm "/var/run/step2_done"
+  "$HOME/autosetup/step3.sh" >> "$HOME/autosetup/logs/log.txt"
 
 elif [ -e "/var/run/step3_done" ]; then
   echo "setup finished"
@@ -42,7 +42,7 @@ else
 
   
   echo "Running step1...."
-  #bash "$HOME/autosetup/step1.sh" >> "$HOME/autosetup/logs/log.txt" &  sudo tail -f "$HOME/autosetup/logs/log.txt"
+  "$HOME/autosetup/step1.sh" >> "$HOME/autosetup/logs/log.txt" &  sudo tail -f "$HOME/autosetup/logs/log.txt"
 
 
 fi
