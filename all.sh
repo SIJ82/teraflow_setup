@@ -33,7 +33,7 @@ else
   if [ -e "/var/run/all_added" ]; then
     echo "all.sh alredy added to ~/.bashrc"
   else
-    echo "bash $HOME/autosetup/all.sh" >> ~/.bashrc
+    echo "$HOME/autosetup/all.sh" >> ~/.bashrc
     sudo touch "/var/run/all_added"
   fi
 
