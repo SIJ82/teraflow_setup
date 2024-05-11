@@ -17,7 +17,7 @@ else
   sudo rm "/var/run/step1_done"
   sudo rm "/var/run/step2_done"
   sudo rm "/var/run/step3_done"
-  sed -i '/bash/d' ~/.bashrc
+  sed -i '/bash $HOME/autosetup/all.sh/d' ~/.bashrc
   
   echo "Setupping permissions..."
   chmod +x "$HOME/autosetup/step1.sh"
